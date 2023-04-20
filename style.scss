@@ -1,0 +1,88 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+body {
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  min-height: 100vh;
+}
+.fireworks {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+canvas {
+  opacity: .2;
+}
+.text {
+  &-wrapper {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    margin-top: 5%;
+  }
+  &-1,
+  &-2,
+  &-3,
+  &-overlay {
+    position: absolute;
+    transform-origin: 0 0;
+    transform: scale(.4);
+  }
+  &-1 {
+    top: 20%;
+    right: 15%;
+  }
+  &-2,
+  &-overlay {
+    top: 40%;
+    left: 50%;
+    transform: scale(.5) translate(-50%, -50%);
+  }
+  &-3 {
+    bottom: 0;
+    left: 50%;
+    transform: scale(.7) translateX(-50%);
+  }
+  &-overlay {
+    z-index: 0;
+    opacity: 0;
+    transition-duration: 2s;
+
+    &_active {
+      opacity: 1;
+    }
+  }
+  &-2 {
+    z-index: 10;
+  }
+}
+.quote-wrapper {
+  font-family: 'Marck Script', cursive;
+  color: transparentize($color: #ffffff, $amount: .4);
+  text-align: center;
+  max-width: 400px;
+  width: 80%;
+
+  &_title {
+    font-size: 1.4rem;
+    color: #ffffff;
+  }
+  &_description {
+    font-size: .9rem;
+  }
+}
+.audio-wrapper {
+  iframe {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+}
