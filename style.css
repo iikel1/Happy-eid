@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Ebhaar";
+  src: url("Ebhaar.otf");
+}
 html,
 body {
   padding: 0;
@@ -52,14 +56,15 @@ canvas {
   z-index: 10; }
 
 .quote-wrapper {
-  font-family: 'Marck Script', cursive;
   color: rgba(136, 14, 79, 0.9);
   text-align: center;
   max-width: 300px;
   width: 80%; }
   .quote-wrapper_title {
-    font-size: 1.4rem;
-    color: #880e4f; }
+    font-size: 1.8rem;
+    color: #880e4f;
+    font-family: 'Ebhaar';
+   }
   .quote-wrapper_description {
     font-size: .9rem; }
 
